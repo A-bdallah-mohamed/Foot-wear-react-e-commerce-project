@@ -689,7 +689,14 @@ const emptycart = () => {
   ) : (
          filderedproducts.map(product => (
           <div key={product.id} className="searchedcards">
-            <div className='addtocartshowuphover'><button>Add To Cart</button></div>
+            <div className='addtocartshowuphover'><select placeholder id='addtocartbtn' value='selectedsize' className='bestsellerbuttonbutton'onChange={(e)=> {getItems();addproducttoccart(item ,e.target.value)}} >
+       <option value=""  selected>Size</option>
+{sizes.map((size,index) => (
+  <option key={index} value={size}>{size}</option>
+))}
+
+
+        </select></div>
           <div className='searchcardimg'><img src={product.img}></img></div>
          
          
@@ -722,7 +729,7 @@ const emptycart = () => {
 <div className='search'>
   
   <div className='searchicon'><FaSearch /></div>
-  <input onKeyDown={displaysearchchange} value={searchtext} onChange={handleInputChange} onClick={() => {togglesearchscreen(); closescroll();}} className='searchfield'></input>
+  <input onKeyDown={displaysearchchange} value={searchtext} onChange={handleInputChange} onClick={() => {togglesearchscreen(); closescroll();}} placeholder='Search' className='searchfield'></input>
   
   {showclear && (
   <span onClick={clearInput}>
@@ -850,7 +857,7 @@ const emptycart = () => {
     <div style={{display:'flex',justifyContent:'space-between',marginTop:'20px'}}><div>Postage costs</div><div>$ 5</div></div>
     <div style={{color:'grey',marginTop:'20px'}}>-----------------------------------</div>
     <div style={{display:'flex',justifyContent:'space-between',marginTop:'20px'}}><div style={{fontWeight:'bold'}}>Total</div><div style={{fontWeight:'bold'}}>$ {totalconst + 5}</div></div>
-    <div style={{display:'flex',justifyContent:'center' , marginTop:'5px'}}><button onClick={emptycart}> To order ( $ {totalconst + 5} )</button></div>
+    <div style={{display:'flex',justifyContent:'center' , marginTop:'5px'}}><Link to='/profilepage'><button> To order ( $ {totalconst + 5} )</button></Link></div>
     </div> 
   <div className='visacontainer' style={{display:'flex' , marginTop:'20px' , gap:'5px'}}><img src='https://logos-world.net/wp-content/uploads/2020/04/Visa-Emblem.jpg'></img><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/MasterCard-Logo.svg/2560px-MasterCard-Logo.svg.png'></img><img src='https://newsroom.paypal-corp.com/images/fillers/Wordmark%20on%20gold.png'></img></div>
   </div>

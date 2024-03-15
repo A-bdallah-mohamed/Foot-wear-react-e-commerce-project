@@ -655,7 +655,14 @@ if (ismenushow || issearchscreenshow){
    ) : (
           filderedproducts.map(product => (
            <div key={product.id} className="searchedcards">
-             <div className='addtocartshowuphover'><button>Add To Cart</button></div>
+             <div className='addtocartshowuphover'><select placeholder id='addtocartbtn' value='selectedsize' className='bestsellerbuttonbutton'onChange={(e)=> {getItems();addproducttoccart(item ,e.target.value)}} >
+       <option value=""  selected>Size</option>
+{sizes.map((size,index) => (
+  <option key={index} value={size}>{size}</option>
+))}
+
+
+        </select></div>
            <div className='searchcardimg'>
            <Link to={`/product/${product.title}`}>
             <img src={product.img} onClick={() => {selectedproduct(product)}}></img>
@@ -695,7 +702,8 @@ if (ismenushow || issearchscreenshow){
  <div className='search'>
    
    <div className='searchicon'><FaSearch /></div>
-   <input onKeyDown={displaysearchchange} value={searchtext} onChange={handleInputChange} onClick={() => {togglesearchscreen(); closescroll();}} className='searchfield'></input>
+   <input onKeyDown={displaysearchchange} value={searchtext} onChange={handleInputChange} onClick={() => {togglesearchscreen(); closescroll();}} placeholder='Search' className='searchfield'></input>
+   
    
    {showclear && (
    <span onClick={clearInput}>

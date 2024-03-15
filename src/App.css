@@ -154,6 +154,7 @@ font-size: 25px;
   .carta{
     margin-right: 2%;
   }
+
   .cartcard:hover{
     transition: transform 0.2s ease;
     transform: translateY(-3px);
@@ -1568,7 +1569,7 @@ margin-top: 50px;
 margin-bottom: 50px;
   position: sticky;
   top: 50px;
- 
+
 }
 .overviewcontainer{
   display: flex;
@@ -1777,6 +1778,7 @@ border-color: rgb(0, 0, 92);
  .profilecard p ,.carta p{
   display: none;
  }
+ 
 .searchicon{
   margin-left: 10px;
   position: absolute;
@@ -1790,19 +1792,20 @@ border-color: rgb(0, 0, 92);
 }
 .companies{
   gap: 25px;
+  margin-left: -55px;
 }
 .mainbannerprice{
-  height: 60px;
-  width: 60px;
-transform: translateX(160%) translateY(40%);
+  height: 90px;
+  width: 90px;
+transform: translateX(-20%) translateY(130%);
 }
 .mainbannerprice p {
   font-size: 10px;
 }
 .mainbannerprice button {
-width: 40px;
-height: 25px;
-font-size: 3px;
+width: 80px;
+height: 35px;
+font-size: 9px;
 
 }
 .bannertext{
@@ -1812,18 +1815,40 @@ display: none;
 .nike{
   display: none;
 }
+.imgdiv{
+min-height: 250px;
+align-items: center;
+justify-content: center;
+}
+.imgdiv img{
+  height: auto;
+  width: auto;
+  min-width: auto;
+}
 .catecards{
-  width: 70px;
+width: 300px;
+margin: 40px 1px;
 }
 .catebutton p{
-font-size: 10px;
+font-size: 15px;
 }
 .catebutton button{
-  width: 60px;
+  width: 95px;
   height: 30px;
-  font-size: 10px;
+  font-size: 15px;
   display: flex;
-flex-direction: column;
+
+}
+.leftdivsp , .rightdivsp{
+margin-left: -55px;
+}
+.leftdivsp img{
+  max-width: 280px;
+}
+.deliveryprice{
+  display: flex;
+  flex-direction: row;
+  width: 55px;
 }
 .bestsp{
   margin-bottom: 5px;
@@ -1861,8 +1886,12 @@ flex-direction: column;
 }
 .cartproductscontainer{
   width: 320px;
-  margin-left: 10px;
+  margin-left: 1px;
+}.profilepageimgcontainer
+{
+  display: none;
 }
+
 .cartsingleproduct{
   width: 300px;
   height: 190px;
@@ -1880,13 +1909,41 @@ padding-left: 50px;
 .contenttwo{
   width: 320px;
   height: 650px;
+  margin-left: 6px;
 }
 .cart{
+  padding: 15px;
   width: 250px;
   height: 500px;
 }
+.cart button{
+  width: 200px;
+}
 .menuslider {
   width: 300px;
+}
+.profilepageinputdata ,.profilepageimgcontainer{
+  margin: 0;
+}
+.profilepageinputdata p  {
+  margin-left: 5px;
+}
+.profilepageinputdata span{
+  margin-left: 15px;
+  text-align: center;
+}
+.searchscreen {
+  margin-top: 90px;
+margin-bottom: 90px;
+}
+.results{
+  padding-bottom: 90px;
+}
+.searchicon{
+  display: none;
+}
+.cartcard{
+  margin-right: 55px;
 }
 .menucate li{
   width: 280px;
@@ -1894,5 +1951,37 @@ padding-left: 50px;
 .secondfirsttext ,.secondli {
   margin-left: 35px;
   width: 250px;
+}
+.cservsmll2{
+  display: none;
+}
+.cserv , .straignline,.Customer-servicecont1,.cservsmll,.Customer-servicecont2,.serv,.servicescontainer{
+  display: none;
+}
+.Customer-service{
+  margin-top: 65px;
+}
+.catecardscontainer{
+  flex-direction: column;
+  margin-left: -55px;
+}
+.conent{
+  margin-left: 6px;
+}
+.categorypageproductcard{
+  width:300px;
+margin-left: -55px;
+}
+.categorypage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart a{
+text-decoration: none;
+width: auto;
+}
+.loginpage{
+  height: auto;
 }
 }
